@@ -1,5 +1,6 @@
 import Neo4jLogoBW from '../../logo.svg';
 import Neo4jLogoColor from '../../logo-color.svg';
+import MarketMindMechanics from '../../assets/images/WhatsApp Image 2024-09-03 at 22.09.45.jpeg'
 import {
   MoonIconOutline,
   SunIconOutline,
@@ -38,9 +39,9 @@ export default function Header({ themeMode, toggleTheme }: { themeMode: string; 
         <section className='flex w-1/3 shrink-0 grow-0 items-center grow min-w-[200px]'>
           <Typography variant='h6' component='a' href='#app-bar-with-responsive-menu' sx={{}}>
             <img
-              src={themeMode === 'dark' ? Neo4jLogoBW : Neo4jLogoColor}
+              src={themeMode === 'dark' ? MarketMindMechanics : MarketMindMechanics}
               className='h-8 min-h-8 min-w-8'
-              alt='Neo4j Logo'
+              alt=''
             />
           </Typography>
         </section>
@@ -50,26 +51,6 @@ export default function Header({ themeMode, toggleTheme }: { themeMode: string; 
               className='inline-flex gap-x-1'
               style={{ display: 'flex', flexGrow: 0, alignItems: 'center', gap: '4px' }}
             >
-              <IconButtonWithToolTip
-                text={tooltips.documentation}
-                onClick={() => handleURLClick('https://neo4j.com/labs/genai-ecosystem/llm-graph-builder')}
-                size='large'
-                clean
-                placement='left'
-                label={tooltips.documentation}
-              >
-                <InformationCircleIconOutline className='n-size-token-7' />
-              </IconButtonWithToolTip>
-
-              <IconButtonWithToolTip
-                label={tooltips.github}
-                onClick={() => handleURLClick('https://github.com/neo4j-labs/llm-graph-builder/issues')}
-                text={tooltips.github}
-                size='large'
-                clean
-              >
-                <CodeBracketSquareIconOutline />
-              </IconButtonWithToolTip>
               <IconButtonWithToolTip
                 label={tooltips.theme}
                 text={tooltips.theme}

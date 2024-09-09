@@ -21,8 +21,12 @@ from src.shared.constants import MODEL_VERSIONS
 def get_llm(model: str):
     """Retrieve the specified language model based on the model name."""
     env_key = "LLM_MODEL_CONFIG_" + model
+    print(env_key)
     env_value = os.environ.get(env_key)
+    print()
     logging.info("Model: {}".format(env_key))
+    logging.info("Model: {}".format(env_value))
+    logging.info("Model: {}".format("gemini" in model))
     if "gemini" in model:
         credentials, project_id = google.auth.default()
         model_name = MODEL_VERSIONS[model]
